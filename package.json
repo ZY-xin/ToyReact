@@ -1,19 +1,21 @@
 {
-  "name": "toyreact",
+  "name": "toy-react",
   "version": "1.0.0",
-  "description": "ToyReact",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dbx142857/ToyReact.git"
-  },
+  "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/dbx142857/ToyReact/issues"
-  },
-  "homepage": "https://github.com/dbx142857/ToyReact#readme"
+  "devDependencies": {
+    "@babel/core": "^7.12.7",
+    "@babel/plugin-transform-react-jsx": "^7.12.7",
+    "@babel/preset-env": "^7.12.7",
+    "babel-loader": "^8.2.1",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^4.2.0"
+  }
 }
