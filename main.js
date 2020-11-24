@@ -9,7 +9,7 @@ class MyComponent extends Bue.jsxComp {
 
 
 window.addEventListener('load', () => {
-    Bue.renderJsx(<MyComponent>
+    Bue.render(<MyComponent>
         i am pure text
         <div title="a">a</div>
         {/* <div title="b">b</div> */}

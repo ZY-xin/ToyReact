@@ -1,3 +1,12 @@
+
+
+class TextWrapper {
+    constructor(content) {
+        this.root = document.createTextNode(content)
+    }
+}
+
+
 class ElementWrapper {
     constructor(tagName) {
         this.root = document.createElement(tagName)
@@ -12,13 +21,6 @@ class ElementWrapper {
         }
     }
 }
-
-class TextWrapper {
-    constructor(content) {
-        this.root = document.createTextNode(content)
-    }
-}
-
 
 
 
@@ -102,4 +104,4 @@ function createElement(type, attributes, ...children) {
 //     mountEle.appendChild(component.root);
 // }
 
-Bue.renderJsx = (component, mountEle) => mountEle.appendChild(component.root);;
+Bue.render = (component, mountEle) => mountEle.appendChild(component.root);;
