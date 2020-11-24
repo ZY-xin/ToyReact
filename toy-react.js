@@ -57,9 +57,15 @@ Bue.jsxComp = class {
         this.children.push(child)
     }
     get root() {
-        console.log('this---:', this)
+        console.log('root was get ed--:', this._root)
+        // console.log('this---:', this)
         if (!this._root) {
             console.log('render in this--:', this.render())
+            //this.render是一个继承了Bue.createJsxComp的被实例化了的类,且有render方法,
+            //render方法调用,实际上是调用createElement方法,
+            //然后再访问其root属性,root属性为一个真实d的dom node
+
+            //render方法又会调用ElementWrapper方法,该class在constructor阶段会生成root属性,所以此处可以访问到root属性
             this._root = this.render().root
         }
         return this._root
@@ -104,4 +110,8 @@ function createElement(type, attributes, ...children) {
 //     mountEle.appendChild(component.root);
 // }
 
-Bue.render = (component, mountEle) => mountEle.appendChild(component.root);;
+Bue.render = (component, mountEle) => {
+
+    console.log('component.root---:', component.root)
+    mountEle.appendChild(component.root);
+}
